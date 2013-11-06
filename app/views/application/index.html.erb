@@ -1,0 +1,21 @@
+<div class="row">
+  <h1 class='text-center'>Address Book</h1>
+</div>
+
+<script type="text/x-handlebars" data-template-name="contacts">
+  <h3>Contacts</h3>
+  <div class='row'>
+    <div class="small-6 columns">
+      {{view Ember.TextField valueBinding="newContactName"}}
+    </div>
+  </div>
+  <section id="contact-list">
+    <ul>
+      {{#each}}
+        <li>
+          {{name}}
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+</script>
