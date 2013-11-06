@@ -6,7 +6,7 @@
   <h3>Contacts</h3>
   <div class='row'>
     <div class="small-6 columns">
-      {{view Ember.TextField valueBinding="newContactName"}}
+      {{view Ember.TextField id="new-contact" placeholder="New Contact Name" value=newContactName action="createContact"}}
     </div>
   </div>
   <section id="contact-list">

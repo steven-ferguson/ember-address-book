@@ -23,7 +23,6 @@
 
 // for more details see: http://emberjs.com/guides/application/
 AddressBook = Ember.Application.create();
-AddressBook.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 //= require_tree .
 
