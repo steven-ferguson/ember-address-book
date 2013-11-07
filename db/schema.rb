@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20131107010003) do
 
   create_table "phones", force: true do |t|
     t.string  "name"
-    t.integer "number"
+    t.string  "number"
     t.integer "contact_id"
   end
 
