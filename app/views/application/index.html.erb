@@ -16,9 +16,14 @@
           {{#if isEditing}}
             {{view Ember.TextField value=name focus-out="acceptChanges" insert-newline="acceptChanges"}}
           {{else}}
-            {{name}}
-            <i {{action "editContact"}} class="fi-edit"></i>
-            <i {{action "removeContact"}} class='fi-remove'></i>
+            {{#if addingPhone}}
+              {{view Ember.TextField value=newPhone action="addNewPhone"}}
+            {{else}}
+              {{name}}
+              <i {{action "editContact"}} class="fi-edit"></i>
+              <i {{action "removeContact"}} class='fi-remove'></i>
+              <i {{action "addPhone"}} class="fi-phone"></i>
+            {{/if}}
           {{/if}}
         </li>
       {{/each}}
