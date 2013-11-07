@@ -1,0 +1,38 @@
+<script type="text/x-handlebars">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a>Address Book</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider">
+        <li>{{#link-to 'contacts'}}Contacts{{/link-to}}</li>
+        <li class="divider"></li>
+      </ul>
+      <ul class="right">
+      </ul>
+    </section>
+  </nav>
+
+  {{outlet}}
+</script>
+
+<script type="text/x-handlebars" id="contacts">
+  <div class='row'>
+    <h1 class='text-center'>Contacts</h1>
+  </div>
+  <div class='row'>
+    <div class="small-4 columns">
+      <ul class="side-nav">
+        {{#each}}
+          <li><a>{{name}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</script>
+
+
