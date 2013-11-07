@@ -13,8 +13,13 @@
     <ul>
       {{#each itemController="contact"}}
         <li>
-          {{name}}
-          <button {{action "removeContact"}} class='danger'>Delete</button>
+          {{#if isEditing}}
+            {{view Ember.TextField value=name focus-out="acceptChanges" insert-newline="acceptChanges"}}
+          {{else}}
+            {{name}}
+            <i {{action "editContact"}} class="fi-edit"></i>
+            <i {{action "removeContact"}} class='fi-remove'></i>
+          {{/if}}
         </li>
       {{/each}}
     </ul>

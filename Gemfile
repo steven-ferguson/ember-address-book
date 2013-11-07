@@ -12,6 +12,7 @@ gem 'ember-source'
 gem 'ember-data-source', '~>1.0.0.beta2'
 gem 'compass-rails'
 gem 'zurb-foundation'
+gem 'foundicons-rails'
 
 group :development, :test do 
   gem 'rspec-rails'
