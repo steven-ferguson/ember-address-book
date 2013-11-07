@@ -1,32 +1,3 @@
 <div class="row">
   <h1 class='text-center'>Address Book</h1>
 </div>
-
-<script type="text/x-handlebars" data-template-name="contacts">
-  <h3>Contacts</h3>
-  <div class='row'>
-    <div class="small-6 columns">
-      {{view Ember.TextField id="new-contact" placeholder="New Contact Name" value=newContactName action="createContact"}}
-    </div>
-  </div>
-  <section id="contact-list">
-    <ul>
-      {{#each itemController="contact"}}
-        <li>
-          {{#if isEditing}}
-            {{view Ember.TextField value=name focus-out="acceptChanges" insert-newline="acceptChanges"}}
-          {{else}}
-            {{#if addingPhone}}
-              {{view Ember.TextField value=newPhone action="addNewPhone"}}
-            {{else}}
-              {{name}}
-              <i {{action "editContact"}} class="fi-edit"></i>
-              <i {{action "removeContact"}} class='fi-remove'></i>
-              <i {{action "addPhone"}} class="fi-phone"></i>
-            {{/if}}
-          {{/if}}
-        </li>
-      {{/each}}
-    </ul>
-  </section>
-</script>
