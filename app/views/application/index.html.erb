@@ -11,9 +11,10 @@
   </div>
   <section id="contact-list">
     <ul>
-      {{#each}}
+      {{#each itemController="contact"}}
         <li>
           {{name}}
+          <button {{action "removeContact"}} class='danger'>Delete</button>
         </li>
       {{/each}}
     </ul>
