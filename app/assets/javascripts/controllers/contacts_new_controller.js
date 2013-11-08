@@ -6,7 +6,7 @@ AddressBook.ContactsNewController = Ember.Controller.extend({
       var contact = this.store.createRecord('contact', {
         name: name
       });
-      contact.save();
+      contact.save().then(this.transitionToRoute('contact', contact));
     }
   }
 });
