@@ -1,4 +1,4 @@
 class PhoneSerializer < ActiveModel::Serializer
   attributes :id, :name, :number
-  belongs_to :contact
+  has_one :contact
 end
