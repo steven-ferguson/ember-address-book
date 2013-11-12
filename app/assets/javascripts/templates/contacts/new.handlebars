@@ -3,6 +3,8 @@
 </div>
 <div class='row'>
   <div class='small-6 columns'>
-    {{input type="text" id="new-contact-name" placeholder="Name" value=newName action="createContact"}}
+  	<p>{{errors}}</p>
+    {{input type="text" id="new-contact-name" placeholder="Name" value=newName}}
+    <button {{action createContact}}>Submit</button>
   </div>
 </div>

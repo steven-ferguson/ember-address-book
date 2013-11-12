@@ -9,7 +9,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'ember-rails'
 gem 'ember-source'
-gem 'ember-data-source', '~>1.0.0.beta2'
 gem 'compass-rails'
 gem 'zurb-foundation'
 gem 'foundicons-rails'
@@ -17,6 +16,7 @@ gem 'foundicons-rails'
 group :development, :test do 
   gem 'rspec-rails'
   gem 'pry'
+  gem 'konacha'
 end
 
 group :test do 

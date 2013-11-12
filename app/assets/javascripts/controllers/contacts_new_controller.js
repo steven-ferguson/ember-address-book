@@ -1,16 +1,22 @@
 AddressBook.ContactsNewController = Ember.ObjectController.extend({
   actions: {
     createContact: function() {
+      var self = this;
+      var contact = this.get('model');
       var name = this.get('newName');
-      if (!name.trim()) { return; }
-      this.get('model').set('name', name);
-      this.get('model').save();
+      if (name) {
+        contact.set('name', name.trim());
+      } else {
+        contact.set('name', '');
+      }
+      contact.save().then(
+        function () {
+          self.transitionToRoute('contact', contact);
+        }, 
+        function (response) { 
+          self.set('errors', response.message);
+        }
+      );
     }
-  },
-
-  transitionAfterSave: function() {
-    if (this.get('model.id')) {
-      this.transitionToRoute('contact', this.get('model'));
-    }
-  }.observes('model.id')
+  }
 });
