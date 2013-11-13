@@ -7,11 +7,13 @@
   <button {{action "addPhone"}} class="tiny button">Add a Phone</button>
 {{/if}}
 
-<p>Phones</p>
-<ul>
-{{#each phones}}
-  <li>{{number}}</li>
-{{/each}}
-</ul>
+<section id='phones'>
+  <p>Phones</p>
+  <ul>
+  {{#each phones}}
+    <li>{{number}}</li>
+  {{/each}}
+  </ul>
+<section>
 
 {{outlet}}
