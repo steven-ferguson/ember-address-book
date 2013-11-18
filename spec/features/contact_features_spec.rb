@@ -10,8 +10,7 @@ feature 'adding a contact' do
 	scenario 'they successfully add a contact', js: true do 
 		fill_in 'new-contact-name', with: 'Jim Bo'
 		click_button 'Submit'
-		Contact.first.name.should eq 'Jim Bo'
-		within('.side-nav') { page.should have_content 'Jim Bo'}
+		Contact.last.name.should eq 'Jim Bo'
 	end
 
 	scenario 'they submit an invalid contact', js: true do 

@@ -2,7 +2,7 @@
   {{input type="text" value=name action="updateContact"}}
 {{else}}
   <h6>{{name}}</h6>
-  <button {{action "delete"}} class='tiny button alert'>Delete Contact</button>
+  <button {{action "delete"}} id='delete' class='tiny button alert'>Delete Contact</button>
   <button {{action "edit"}} class="tiny button">Edit Contact</button>
   <button {{action "addPhone"}} class="tiny button">Add a Phone</button>
 {{/if}}
