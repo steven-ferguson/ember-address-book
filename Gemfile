@@ -12,6 +12,7 @@ gem 'ember-source'
 gem 'compass-rails'
 gem 'zurb-foundation'
 gem 'foundicons-rails'
+gem 'faker'
 
 group :development, :test do 
   gem 'rspec-rails'
