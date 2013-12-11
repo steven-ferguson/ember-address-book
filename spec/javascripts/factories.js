@@ -8,6 +8,7 @@ AddressBook.Store = DS.Store.extend({
   adapter: DS.FixtureAdapter.create()
 });
 
-AddressBook.Contact.FIXTURES = [
+injectFixtures = function(app) {
+  app.Contact.FIXTURES = [];  
+};
 
-];
